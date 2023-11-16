@@ -4,20 +4,17 @@ $mobile-and-below: 550px;
 
 .wrapper {
   display: grid;
-  min-height: 100%;
-  grid-template-areas:
-    'header'
-    'main'
-    'profile'
-    'footer';
-  grid-template-rows: 660px 730px 1fr 350px;
-
   position: relative;
-  overflow: hidden;
+  height: 800px;
+  grid-template-areas:
+    'upper'
+    'lower';
+  grid-template-rows: 400px 400px;
 
-  // --padding-identation: 160px;
-  // --padding-identation-tablet: 38px;
-  // --padding-identation-mobile: 16px;
+  padding-left: 165px;
+  padding-right: 165px;
+  padding-top: 56px;
+  padding-bottom: 98px;
 
   // @media (max-width: $tablet-and-below) {
   //   grid-template-rows: 540px 1000px 1fr 250px;
@@ -26,4 +23,12 @@ $mobile-and-below: 550px;
   // @media (max-width: $mobile-and-below) {
   //   grid-template-rows: 480px 1100px 1fr 250px;
   // }
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
 }

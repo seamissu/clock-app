@@ -44,10 +44,12 @@ h6 {
 }
 
 // Global baseline styles
-// :root {
-//   --dark-purple: hsl(273deg 85% 13%);
-//   --eucaplyptus: hsl(150deg 100% 63%);
-//   --davys-grey: hsl(271deg 12% 34%);
-//   --ghost-white: hsl(276deg 100% 99%);
-//   --white: hsl(0deg 0% 100%);
-// }
+:root {
+  --black: hsl(0deg 0% 0%);
+  --white: hsl(0deg 0% 100%);
+  --button-normal: hsl(0deg 0% 19%);
+  --button-active: hsl(0deg 0% 60%);
+
+  --font-size-body-regular: 18px;
+  --line-height-body-regular: 28px;
+}
