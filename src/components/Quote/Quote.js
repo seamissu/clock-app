@@ -18,13 +18,34 @@ const ENDPOINT =
 
 function Quote() {
   const { data } = useSWR(ENDPOINT, fetcher);
-  console.log(data);
+  const [status, setStatus] = React.useState('idle');
+
+  async function handleClick(event) {
+    event.preventDefault();
+
+    setStatus('loading');
+
+    const response = await fetch(ENDPOINT);
+    const json = await response.json();
+
+    if (typeof json[0].length === 'number') {
+      setStatus('success');
+    } else {
+      setStatus('error');
+    }
+  }
 
   return (
     <div className={styles.wrapper}>
       <p className={styles.quote}>{`"${data[0].content}"`}</p>
       <h5 className={styles.author}>{data[0].author}</h5>
-      <RefreshIcon />
+      <button
+        className={styles.button}
+        onClick={handleClick}
+        disabled={status === 'loading'}
+      >
+        <RefreshIcon />
+      </button>
     </div>
   );
 }
