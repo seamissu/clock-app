@@ -1,0 +1,29 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
+.wrapper {
+  display: grid;
+  min-height: 100%;
+  grid-template-areas:
+    'header'
+    'main'
+    'profile'
+    'footer';
+  grid-template-rows: 660px 730px 1fr 350px;
+
+  position: relative;
+  overflow: hidden;
+
+  // --padding-identation: 160px;
+  // --padding-identation-tablet: 38px;
+  // --padding-identation-mobile: 16px;
+
+  // @media (max-width: $tablet-and-below) {
+  //   grid-template-rows: 540px 1000px 1fr 250px;
+  // }
+
+  // @media (max-width: $mobile-and-below) {
+  //   grid-template-rows: 480px 1100px 1fr 250px;
+  // }
+}
