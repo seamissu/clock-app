@@ -3,6 +3,7 @@ import styles from './Time.module.scss';
 
 import SunIcon from '../SunIcon';
 import Button from '../Button';
+import ButtonLess from '../ButtonLess';
 
 function Time() {
   return (
@@ -19,7 +20,7 @@ function Time() {
         <p className={styles.location}>in London, UK</p>
       </div>
       <div className={styles.buttonwrapper}>
-        <Button />
+        <ButtonLess />
       </div>
     </div>
   );

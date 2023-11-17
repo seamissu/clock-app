@@ -31,4 +31,12 @@ $mobile-and-below: 550px;
   top: 0;
   object-fit: cover;
   object-position: 0 0;
+
+  @media (min-width: 1440px) {
+    object-fit: revert;
+    object-position: revert;
+
+    width: 100%;
+    height: auto;
+  }
 }
