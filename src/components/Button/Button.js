@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 import ArrowDown from '../ArrowDown';
 import ArrowUp from '../ArrowUp';
