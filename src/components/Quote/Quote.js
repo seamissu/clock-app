@@ -38,8 +38,8 @@ function Quote() {
 
   return (
     <div className={styles.wrapper}>
-      <p className={styles.quote}>{`"${data[0].content}"`}</p>
-      <h5 className={styles.author}>{data[0].author}</h5>
+      {/* <p className={styles.quote}>{`"${data[0].content}"`}</p>
+      <h5 className={styles.author}>{data[0].author}</h5> */}
       <button
         className={styles.button}
         onClick={handleClick}
