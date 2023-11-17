@@ -1,0 +1,36 @@
+.buttonwrapper {
+  width: 146px;
+  height: 56px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: none;
+  background: none;
+  color: inherit;
+
+  background-color: var(--white);
+  border-radius: 5000px;
+}
+
+.buttonwrapper p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: var(--line-height-body-regular);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--button-normal);
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--button-normal);
+  border-radius: 40px;
+
+  display: grid;
+  place-content: center;
+}
