@@ -19,6 +19,7 @@ const ENDPOINT =
 function Quote() {
   const { data } = useSWR(ENDPOINT, fetcher);
   const [status, setStatus] = React.useState('idle');
+  console.log(data);
 
   async function handleClick(event) {
     event.preventDefault();

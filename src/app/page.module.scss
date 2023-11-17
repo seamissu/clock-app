@@ -9,7 +9,7 @@ $mobile-and-below: 550px;
   grid-template-areas:
     'upper'
     'lower';
-  grid-template-rows: 400px 400px;
+  grid-template-rows: 1fr 1fr;
 
   padding-left: 165px;
   padding-right: 165px;
@@ -29,6 +29,6 @@ $mobile-and-below: 550px;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  object-position: 0 0;
 }

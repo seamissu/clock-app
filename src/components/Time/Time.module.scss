@@ -1,0 +1,71 @@
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'time button';
+  grid-template-columns: 1fr 1fr;
+
+  color: var(--white);
+}
+
+.timewrapper {
+  grid-area: time;
+  justify-self: start;
+  align-self: end;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.greetingwrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.greetingwrapper p {
+  font-size: var(--font-size-heading-4);
+  line-height: var(--line-height-body-regular);
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.timezonewrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.timezonewrapper p:first-of-type {
+  font-size: var(--font-size-heading-1);
+  line-height: var(--line-height-heading-1);
+  letter-spacing: -5px;
+  font-weight: 700;
+}
+
+.timezonewrapper p:last-of-type {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: var(--line-height-body-regular);
+  text-transform: uppercase;
+}
+
+.location {
+  font-size: var(--font-size-heading-3);
+  line-height: var(--line-height-body-regular);
+  font-weight: 700;
+  letter-spacing: 4.8px;
+  text-transform: uppercase;
+}
+
+.buttonwrapper {
+  grid-area: button;
+  justify-self: end;
+  align-self: end;
+}
+
+.button {
+  width: 146px;
+  height: 56px;
+}
