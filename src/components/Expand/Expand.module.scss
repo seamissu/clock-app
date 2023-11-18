@@ -1,7 +1,9 @@
 .wrapper {
   position: relative;
   border: 2px solid red;
-  color: white;
+  color: var(--button-normal);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   display: grid;
   grid-template-areas: 'first second';
@@ -14,9 +16,21 @@
   padding-bottom: 74px;
 }
 
+.wrapper h6 {
+  font-size: var(--font-size-heading-6);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.wrapper h2 {
+  font-size: var(--font-size-heading-2);
+}
+
 .whitedrop {
   position: absolute;
   background-color: white;
+  opacity: 0.8;
+
   top: 0px;
   left: 0px;
   width: 100%;
@@ -25,22 +39,32 @@
 }
 
 .firstwrapper {
+  position: relative;
   grid-area: first;
-  border-right: 2px solid white;
+  padding-right: 94px;
+  border-right: 1px solid var(--button-normal);
 }
 
 .citywrapper {
+  position: relative;
+  margin-bottom: 42px;
 }
 
 .dayoftheyear {
+  position: relative;
 }
 
 .secondwrapper {
+  position: relative;
   grid-area: second;
+  padding-left: 94px;
 }
 
 .dayoftheweek {
+  position: relative;
+  margin-bottom: 42px;
 }
 
 .weeknumber {
+  position: relative;
 }
