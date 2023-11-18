@@ -10,11 +10,7 @@ $mobile-and-below: 550px;
     'upper'
     'lower';
   grid-template-rows: 1fr 1fr;
-
-  // padding-left: 165px;
-  // padding-right: 165px;
-  // padding-top: 56px;
-  // padding-bottom: 98px;
+  overflow: hidden;
 
   // @media (max-width: $tablet-and-below) {
   //   grid-template-rows: 540px 1000px 1fr 250px;
