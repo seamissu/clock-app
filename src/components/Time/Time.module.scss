@@ -5,6 +5,18 @@
   grid-template-columns: 1fr 1fr;
 
   color: var(--white);
+
+  padding-left: 165px;
+  padding-right: 165px;
+  padding-top: 56px;
+}
+
+.isExpand {
+  padding-bottom: 56px;
+}
+
+.notExpand {
+  padding-bottom: 98px;
 }
 
 .timewrapper {

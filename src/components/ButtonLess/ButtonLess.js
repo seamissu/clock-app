@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './ButtonLess.module.scss';
 import ArrowUp from '../ArrowUp';
 
-function ButtonLess() {
+function ButtonLess({ toggleExpand }) {
   return (
-    <button className={styles.buttonwrapper}>
+    <button onClick={toggleExpand} className={styles.buttonwrapper}>
       <p>Less</p>
       <ArrowUp />
     </button>

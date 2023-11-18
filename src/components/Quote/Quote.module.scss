@@ -1,14 +1,19 @@
 .wrapper {
   position: relative;
   color: var(--white);
-  width: 540px;
+
+  padding-left: 165px;
+  padding-right: 165px;
+  padding-top: 56px;
 }
 
 .quote {
+  position: relative;
   font-size: var(--font-size-body-regular);
   font-weight: 400;
   line-height: var(--line-height-body-regular);
   margin-bottom: 13px;
+  width: 540px;
 }
 
 .author {

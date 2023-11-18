@@ -5,9 +5,12 @@ import SunIcon from '../SunIcon';
 import Button from '../Button';
 import ButtonLess from '../ButtonLess';
 
-function Time() {
+function Time({ isExpanded, toggleExpand }) {
+  const className = `${styles.wrapper} 
+  ${isExpanded ? styles.isExpand : styles.notExpand}`;
+
   return (
-    <div className={styles.wrapper}>
+    <div className={className}>
       <div className={styles.timewrapper}>
         <div className={styles.greetingwrapper}>
           <SunIcon />
@@ -20,7 +23,11 @@ function Time() {
         <p className={styles.location}>in London, UK</p>
       </div>
       <div className={styles.buttonwrapper}>
-        <ButtonLess />
+        {isExpanded ? (
+          <ButtonLess toggleExpand={toggleExpand} />
+        ) : (
+          <Button toggleExpand={toggleExpand} />
+        )}
       </div>
     </div>
   );

@@ -11,10 +11,10 @@ $mobile-and-below: 550px;
     'lower';
   grid-template-rows: 1fr 1fr;
 
-  padding-left: 165px;
-  padding-right: 165px;
-  padding-top: 56px;
-  padding-bottom: 98px;
+  // padding-left: 165px;
+  // padding-right: 165px;
+  // padding-top: 56px;
+  // padding-bottom: 98px;
 
   // @media (max-width: $tablet-and-below) {
   //   grid-template-rows: 540px 1000px 1fr 250px;
@@ -33,10 +33,10 @@ $mobile-and-below: 550px;
   object-position: 0 0;
 
   @media (min-width: 1440px) {
-    object-fit: revert;
+    object-fit: cover;
     object-position: revert;
 
     width: 100%;
-    height: auto;
+    height: min(auto, 800px);
   }
 }

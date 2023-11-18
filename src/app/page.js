@@ -25,7 +25,7 @@ export default function Home() {
         alt="A streak inside a forest used as background picture"
       />
       {!isExpanded && <Quote />}
-      <Time toggleExpand={toggleExpand} />
+      <Time isExpanded={isExpanded} toggleExpand={toggleExpand} />
       {isExpanded && <Expand />}
     </main>
   );
