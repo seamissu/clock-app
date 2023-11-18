@@ -12,6 +12,10 @@ const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
 
 function Expand() {
   // const { continent, city } = useIP(IP_ENDPOINT);
+
+  const continent = 'Oceania';
+  const city = 'Sydney';
+
   const { dayofyear, dayofweek, weeknumber, hour } =
     useTime(TIME_ENDPOINT);
 
@@ -31,7 +35,7 @@ function Expand() {
       <div className={styles.firstwrapper}>
         <div className={styles.citywrapper}>
           <h6>Current timezone</h6>
-          {/* <h2>{`${continent}/${city}`}</h2> */}
+          <h2>{`${continent}/${city}`}</h2>
         </div>
         <div className={styles.dayoftheyear}>
           <h6>Day of the year</h6>

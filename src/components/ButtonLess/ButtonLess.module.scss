@@ -1,3 +1,7 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
 .buttonwrapper {
   width: 146px;
   height: 56px;
@@ -21,6 +25,12 @@
       fill: #999999;
     }
   }
+
+  @media (max-width: $mobile-and-below) {
+    width: 115px;
+    height: 39px;
+    justify-content: flex-end;
+  }
 }
 
 .buttonwrapper p {
@@ -30,4 +40,10 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--button-normal);
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 3.75px;
+  }
 }

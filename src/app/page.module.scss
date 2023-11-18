@@ -2,6 +2,9 @@
 $tablet-and-below: 1100px;
 $mobile-and-below: 550px;
 
+$tablet-background-image: 768px;
+$mobile-background-image: 376px;
+
 .wrapper {
   display: grid;
   position: relative;
@@ -12,21 +15,24 @@ $mobile-and-below: 550px;
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
 
-  // @media (max-width: $tablet-and-below) {
-  //   grid-template-rows: 540px 1000px 1fr 250px;
-  // }
+  @media (max-width: $tablet-and-below) {
+    grid-template-rows: 1fr 440px;
+    height: 1024px;
+  }
 
-  // @media (max-width: $mobile-and-below) {
-  //   grid-template-rows: 480px 1100px 1fr 250px;
-  // }
+  @media (max-width: $mobile-and-below) {
+    grid-template-rows: 1fr 256px;
+    height: 667px;
+  }
 }
 
-.background {
+.backgrounddesktop {
   position: absolute;
   left: 0;
   top: 0;
   object-fit: cover;
   object-position: 0 0;
+  filter: brightness(60%);
 
   @media (min-width: 1440px) {
     object-fit: cover;
@@ -34,5 +40,58 @@ $mobile-and-below: 550px;
 
     width: 100%;
     height: min(auto, 800px);
+  }
+
+  @media (max-width: $tablet-and-below) {
+    display: none;
+  }
+}
+
+.backgroundtablet {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  object-position: 0 0;
+  filter: brightness(60%);
+
+  @media (max-width: $tablet-and-below) {
+    display: revert;
+
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: $tablet-background-image) {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    display: none;
+  }
+}
+
+.backgroundmobile {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  object-position: 0 0;
+  filter: brightness(60%);
+
+  @media (max-width: $mobile-and-below) {
+    display: revert;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: $mobile-background-image) {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
   }
 }

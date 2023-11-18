@@ -1,0 +1,16 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
+.large {
+  @media (max-width: $mobile-and-below) {
+    display: none;
+  }
+}
+
+.small {
+  display: none;
+  @media (max-width: $mobile-and-below) {
+    display: revert;
+  }
+}

@@ -39,7 +39,7 @@ function Quote() {
   return (
     <div className={styles.wrapper}>
       <p className={styles.quote}>
-        {`"${data[0].content}"`}
+        {/* {`"${data[0].content}"`} */}
         <button
           className={styles.button}
           onClick={handleClick}
@@ -48,7 +48,7 @@ function Quote() {
           <RefreshIcon />
         </button>
       </p>
-      <h5 className={styles.author}>{data[0].author}</h5>
+      {/* <h5 className={styles.author}>{data[0].author}</h5> */}
     </div>
   );
 }

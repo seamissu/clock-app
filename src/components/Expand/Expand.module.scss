@@ -1,3 +1,7 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
 .wrapper {
   position: relative;
   border: 2px solid red;
@@ -14,6 +18,26 @@
   padding-right: 165px;
   padding-top: 74px;
   padding-bottom: 74px;
+
+  @media (max-width: $tablet-and-below) {
+    padding-left: 64px;
+    padding-top: 119px;
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-template-areas: revert;
+    grid-template-columns: revert;
+    grid-template-rows: revert;
+
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .daytimefontcolor {
@@ -28,10 +52,30 @@
   font-size: var(--font-size-heading-6);
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-weight: 400;
+  line-height: var(--line-height-body-regular);
+
+  @media (max-width: $tablet-and-below) {
+    font-size: 13px;
+    letter-spacing: 2.6px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
 }
 
 .wrapper h2 {
   font-size: var(--font-size-heading-2);
+
+  @media (max-width: $tablet-and-below) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 20px;
+  }
 }
 
 .backdrop {
@@ -41,8 +85,15 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
-  margin: auto;
+  height: 400px;
+
+  @media (max-width: $tablet-and-below) {
+    height: 440px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    height: 256px;
+  }
 }
 
 .daytimebgcolor {
@@ -58,28 +109,87 @@
   grid-area: first;
   padding-right: 94px;
   border-right: 1px solid var(--button-normal);
+
+  @media (max-width: $tablet-and-below) {
+    border: none;
+    padding-right: 80px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-right: 0px;
+    grid-area: revert;
+  }
 }
 
 .citywrapper {
   position: relative;
   margin-bottom: 42px;
+
+  @media (max-width: $tablet-and-below) {
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
 }
 
 .dayoftheyear {
   position: relative;
+
+  @media (max-width: $mobile-and-below) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
 }
 
 .secondwrapper {
   position: relative;
   grid-area: second;
   padding-left: 94px;
+
+  @media (max-width: $tablet-and-below) {
+    padding-left: 0px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    grid-area: revert;
+  }
 }
 
 .dayoftheweek {
   position: relative;
   margin-bottom: 42px;
+
+  @media (max-width: $tablet-and-below) {
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    margin-bottom: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
 }
 
 .weeknumber {
   position: relative;
+
+  @media (max-width: $mobile-and-below) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

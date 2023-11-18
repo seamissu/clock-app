@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className={styles.wrapper}>
       <Image
-        className={styles.background}
+        className={styles.backgrounddesktop}
         src={
           isDaytime
             ? `/desktop/bg-image-daytime.jpg`
@@ -33,6 +33,28 @@ export default function Home() {
         }
         width={1440}
         height={800}
+        alt="A streak inside a forest used as background picture"
+      />
+      <Image
+        className={styles.backgroundtablet}
+        src={
+          isDaytime
+            ? `/tablet/bg-image-daytime.jpg`
+            : `/tablet/bg-image-nighttime.jpg`
+        }
+        width={768}
+        height={1024}
+        alt="A streak inside a forest used as background picture"
+      />
+      <Image
+        className={styles.backgroundmobile}
+        src={
+          isDaytime
+            ? `/mobile/bg-image-daytime.jpg`
+            : `/mobile/bg-image-nighttime.jpg`
+        }
+        width={375}
+        height={667}
         alt="A streak inside a forest used as background picture"
       />
       {!isExpanded && <Quote />}

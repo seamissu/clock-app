@@ -1,3 +1,7 @@
+// Use Scss variable
+$tablet-and-below: 1100px;
+$mobile-and-below: 550px;
+
 .wrapper {
   position: relative;
   display: grid;
@@ -9,14 +13,50 @@
   padding-left: 165px;
   padding-right: 165px;
   padding-top: 56px;
+
+  @media (max-width: $tablet-and-below) {
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 153px;
+
+    grid-template-areas:
+      'time'
+      'button';
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-left: 26px;
+    padding-right: 26px;
+    gap: 48px;
+  }
 }
 
 .isExpand {
   padding-bottom: 56px;
+
+  @media (max-width: $tablet-and-below) {
+    padding-top: 153px;
+    padding-bottom: 64px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-top: 99px;
+    padding-bottom: 40px;
+  }
 }
 
 .notExpand {
   padding-bottom: 98px;
+
+  @media (max-width: $tablet-and-below) {
+    padding-bottom: 64px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    padding-bottom: 40px;
+  }
 }
 
 .timewrapper {
@@ -27,6 +67,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: $tablet-and-below) {
+    gap: 0px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    gap: 16px;
+  }
 }
 
 .greetingwrapper {
@@ -41,12 +89,27 @@
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
+
+  @media (max-width: $tablet-and-below) {
+    font-size: var(--font-size-body-regular);
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 25px;
+
+    & > span {
+      display: none;
+    }
+  }
 }
 
 .timezonewrapper {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  gap: 12px;
 }
 
 .timezonewrapper p:first-of-type {
@@ -54,6 +117,18 @@
   line-height: var(--line-height-heading-1);
   letter-spacing: -5px;
   font-weight: 700;
+
+  @media (max-width: $tablet-and-below) {
+    font-size: 175px;
+    line-height: 175px;
+    letter-spacing: -4.3px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -2.5px;
+  }
 }
 
 .timezonewrapper p:last-of-type {
@@ -61,6 +136,14 @@
   font-weight: 300;
   line-height: var(--line-height-body-regular);
   text-transform: uppercase;
+
+  @media (max-width: $tablet-and-below) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 15px;
+  }
 }
 
 .location {
@@ -69,10 +152,24 @@
   font-weight: 700;
   letter-spacing: 4.8px;
   text-transform: uppercase;
+
+  @media (max-width: $tablet-and-below) {
+    font-size: var(--font-size-body-regular);
+    letter-spacing: 3.6px;
+  }
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
 }
 
 .buttonwrapper {
   grid-area: button;
   justify-self: end;
   align-self: end;
+
+  @media (max-width: $tablet-and-below) {
+    justify-self: start;
+  }
 }

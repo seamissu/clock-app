@@ -18,6 +18,9 @@ function Time({ isExpanded, toggleExpand }) {
   const { time, timezone, hour } = useTime(TIME_ENDPOINT);
   // const { country, city } = useIP(IP_ENDPOINT);
 
+  const country = 'AU';
+  const city = 'Sydney';
+
   const isDaytime = hour >= 5 && hour <= 18;
   const Greetings = [
     'Good Morning',
@@ -40,14 +43,17 @@ function Time({ isExpanded, toggleExpand }) {
       <div className={styles.timewrapper}>
         <div className={styles.greetingwrapper}>
           {isDaytime ? <SunIcon /> : <MoonIcon />}
-          <p>{`${Greetings[index]}, it's currently`}</p>
+          <p>
+            {`${Greetings[index]}`}
+            <span>{`, it's currently`}</span>
+          </p>
         </div>
         <div className={styles.timezonewrapper}>
           <p>{time}</p>
           <p>{timezone}</p>
         </div>
         <p className={styles.location}>
-          {/* in {city}, {country} */}
+          in {city}, {country}
         </p>
       </div>
       <div className={styles.buttonwrapper}>
