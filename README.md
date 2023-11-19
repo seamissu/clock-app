@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I choosed SWR when it comes to data fetching on mount, and I wrapped the fetching logic in my custom React hooks, such as useIP and useTime. I really liked this pattern.
+I decided to use SWR library when it comes to data fetching on mount, and I wrapped the fetching logic in my custom React hooks, such as useIP and useTime. I really liked this pattern.
 
 ```js
 import useSWR from 'swr';
