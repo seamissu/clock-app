@@ -16,10 +16,7 @@ const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
 
 function Time({ isExpanded, toggleExpand }) {
   const { time, timezone, hour } = useTime(TIME_ENDPOINT);
-  // const { country, city } = useIP(IP_ENDPOINT);
-
-  const country = 'AU';
-  const city = 'Sydney';
+  const { country, city } = useIP(IP_ENDPOINT);
 
   const isDaytime = hour >= 5 && hour <= 18;
   const Greetings = [

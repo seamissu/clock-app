@@ -14,14 +14,32 @@ $mobile-background-image: 376px;
     'lower';
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
+}
 
+.expandtablet {
   @media (max-width: $tablet-and-below) {
     grid-template-rows: 1fr 440px;
     height: 1024px;
   }
+}
 
+.notexpandtablet {
+  @media (max-width: $tablet-and-below) {
+    grid-template-rows: 1fr 1fr;
+    height: 1024px;
+  }
+}
+
+.expandmobile {
   @media (max-width: $mobile-and-below) {
     grid-template-rows: 1fr 256px;
+    height: 667px;
+  }
+}
+
+.notexpandmobile {
+  @media (max-width: $mobile-and-below) {
+    grid-template-rows: 1fr 1fr;
     height: 667px;
   }
 }

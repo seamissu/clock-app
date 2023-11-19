@@ -11,10 +11,7 @@ const IP_ENDPOINT = `https://api.ipbase.com/v2/info?apikey=${API_KEY}&language=e
 const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
 
 function Expand() {
-  // const { continent, city } = useIP(IP_ENDPOINT);
-
-  const continent = 'Oceania';
-  const city = 'Sydney';
+  const { continent, city } = useIP(IP_ENDPOINT);
 
   const { dayofyear, dayofweek, weeknumber, hour } =
     useTime(TIME_ENDPOINT);

@@ -15,6 +15,12 @@ $mobile-and-below: 550px;
     padding-right: 64px;
     padding-top: 80px;
   }
+
+  @media (max-width: $mobile-and-below) {
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 32px;
+  }
 }
 
 .quote {
@@ -24,6 +30,13 @@ $mobile-and-below: 550px;
   line-height: var(--line-height-body-regular);
   margin-bottom: 13px;
   width: 540px;
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 12px;
+    line-height: 22px;
+    width: 290px;
+    margin-bottom: 8px;
+  }
 }
 
 .author {
@@ -31,6 +44,11 @@ $mobile-and-below: 550px;
   font-weight: 700;
   line-height: var(--line-height-body-regular);
   margin-bottom: 13px;
+
+  @media (max-width: $mobile-and-below) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 .button {

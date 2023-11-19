@@ -22,8 +22,13 @@ export default function Home() {
     setIsExpanded(!isExpanded);
   }
 
+  const className = `${styles.wrapper} ${
+    isExpanded ? styles.expandmobile : styles.notexpandmobile
+  } ${isExpanded ? styles.expandtablet : styles.notexpandtablet}
+  `;
+
   return (
-    <main className={styles.wrapper}>
+    <main className={className}>
       <Image
         className={styles.backgrounddesktop}
         src={
