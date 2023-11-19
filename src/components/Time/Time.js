@@ -12,7 +12,7 @@ import useIP from '@/hooks/use-ip';
 const API_KEY = process.env.NEXT_PUBLIC_IPBASE_API_KEY;
 const IP_ENDPOINT = `https://api.ipbase.com/v2/info?apikey=${API_KEY}&language=en`;
 
-const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
+const TIME_ENDPOINT = 'https://worldtimeapi.org/api/ip';
 
 function Time({ isExpanded, toggleExpand }) {
   const { time, timezone, hour } = useTime(TIME_ENDPOINT);

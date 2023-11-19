@@ -10,7 +10,7 @@ import Expand from '@/components/Expand';
 
 import useTime from '@/hooks/use-time';
 
-const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
+const TIME_ENDPOINT = 'https://worldtimeapi.org/api/ip';
 
 export default function Home() {
   const [isExpanded, setIsExpanded] = React.useState(false);

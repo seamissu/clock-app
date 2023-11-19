@@ -8,7 +8,7 @@ import useTime from '@/hooks/use-time';
 
 const API_KEY = process.env.NEXT_PUBLIC_IPBASE_API_KEY;
 const IP_ENDPOINT = `https://api.ipbase.com/v2/info?apikey=${API_KEY}&language=en`;
-const TIME_ENDPOINT = 'http://worldtimeapi.org/api/ip';
+const TIME_ENDPOINT = 'https://worldtimeapi.org/api/ip';
 
 function Expand() {
   const { continent, city } = useIP(IP_ENDPOINT);
