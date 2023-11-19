@@ -60,7 +60,6 @@ async function fetcher(endpoint) {
 
 function useTime(ENDPOINT) {
   const { data } = useSWR(ENDPOINT, fetcher);
-  console.log(data);
 
   return {
     dayofyear: data?.day_of_year,
